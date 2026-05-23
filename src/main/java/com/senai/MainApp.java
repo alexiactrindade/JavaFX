@@ -11,7 +11,7 @@ public class MainApp extends Application {
     @Override
     public void start(Stage stage) throws Exception {
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("main-view.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("moedas-view.fxml"));
         Scene scene = new Scene(loader.load());
         stage.setScene(scene);
         stage.show();

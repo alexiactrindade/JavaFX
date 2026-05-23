@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="TOP_CENTER" prefHeight="362.0" prefWidth="400.0" spacing="20.0" stylesheets="@style/conversor.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.senai.controller.MoedaController">
+
+    <Label styleClass="titulo" text="Conversor de Moedas" />
+
+    <HBox alignment="CENTER_LEFT">
+        <Label styleClass="tituloCampo" text="Valor: " />
+        <TextField fx:id="num1Text" promptText="Digite o primeiro valor" styleClass="campo" HBox.hgrow="ALWAYS" />
+    </HBox>
+
+    <HBox alignment="CENTER_LEFT" spacing="10">
+        <Label styleClass="tituloCampo" text="Conversão" />
+
+        <ComboBox fx:id="num2Combo" promptText="Selecione a moeda" styleClass="campo" HBox.hgrow="ALWAYS">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="BRL -> USD"/>
+                    <String fx:value="USD -> BRL"/>
+                    <String fx:value="BRL -> EUR"/>
+                    <String fx:value="EUR -> BRL"/>
+                </FXCollections>
+            </items>
+        </ComboBox>
+    </HBox>
+
+
+    <Label fx:id="resultadoMoeda" styleClass="resultado" />
+
+    <Button onAction="#calcularMoeda" text="Calcular" />
+    <padding>
+        <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+    </padding>
+
+</VBox>

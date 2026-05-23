@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="TOP_CENTER" prefHeight="532.0" prefWidth="400.0" spacing="20.0" stylesheets="@style/media.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.senai.controller.MediaController">
+
+    <Label styleClass="titulo" text="Calculadora de Média" />
+
+    <HBox alignment="CENTER_LEFT">
+        <Label styleClass="tituloCampo" text="Numero 1: " />
+        <TextField fx:id="num1Text" promptText="Digite o valor a ser convertido" styleClass="campo" HBox.hgrow="ALWAYS" />
+    </HBox>
+
+    <HBox alignment="CENTER_LEFT">
+        <Label styleClass="tituloCampo" text="Numero 2: " />
+        <TextField fx:id="num2Text" promptText="Digite o segundo número" styleClass="campo" HBox.hgrow="ALWAYS" />
+    </HBox>
+
+    <Label fx:id="resultado" />
+   <ComboBox id="moeda" prefWidth="150.0" />
+
+    <Button onAction="#calcular" text="Calcular">
+      <VBox.margin>
+         <Insets top="200.0" />
+      </VBox.margin></Button>
+    <padding>
+        <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+    </padding>
+
+</VBox>
